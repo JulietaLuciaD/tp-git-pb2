@@ -6,6 +6,7 @@ public class Calculadora {
 		Integer opcion;
 		Scanner teclado = new Scanner(System.in);
 		Integer resultado = null;
+		
 		do {
 			System.out.println("Ingrese su operación \n 1 para multiplicar \n 2 para restar \n 3 para sumar \n 4 para dividir");
 			opcion = teclado.nextInt();
@@ -18,20 +19,43 @@ public class Calculadora {
 		
 		switch (opcion) {
 		case 3:
-			resultado = a+b;
+			resultado = sumar(a, b);
 			break;
 		case 2:
-			resultado = a-b;
+			resultado = restar(a, b);
 			break;
 		case 1:
-			resultado = a*b;
+			resultado = multiplicar (a, b);
+			break;
 		case 4:
-		resultado = a/b ;
+			if (b != 0) {
+				resultado = dividir(a, b);
+			}
+			else System.out.println("No se puede dividir por 0");
+		
 			break;
 		default: 
 			break;
 		}
 		
-		System.out.println("El resultado es " + resultado.toString());
+		System.out.println("El resultado es " + resultado);
 	}
+
+	private static Integer multiplicar(Integer a, Integer b) {
+		return a*b;
+	}
+
+	private static Integer restar(Integer a, Integer b) {
+		return a-b;
+	}
+
+	private static int sumar(Integer a, Integer b) {
+		return a + b;
+		
+	}
+	private static Integer dividir(Integer a, Integer b) {
+		return a/b;
+	}
+
+	
 }
