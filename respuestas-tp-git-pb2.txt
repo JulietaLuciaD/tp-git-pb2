@@ -16,3 +16,9 @@ c. clonar el repo y después hacer los cambios y pull request
 
 6.Crea una branch/rama y te envía a esa nueva branch (de master a develop)
 
+9.
+a) ¿Qué diferencias notaron en el proceso?
+Se creo un branch nuevo a partir de develop.
+
+b) ¿Qué estrategia utilizarían para evitar conflictos?
+Mantendríamos en nuestro branch local siempre la última versión del branche al que quiero finalmente general el merge. 
